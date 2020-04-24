@@ -1,0 +1,6 @@
+HISTORY 
+
+    Mario Sokoban is a game create in 80's by Hiroyuki Imabayashi.
+    
+    Game's Goals 
+        The player have to move the bricks 

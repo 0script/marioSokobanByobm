@@ -1,0 +1,19 @@
+CC=gcc
+CFLAGS=-W -Wall $(shell sdl2-config --cflags)
+LDFLAGS=-export-dynamic $(shell sdl2-config --libs)
+EXEC=imgsdl
+
+all:$(EXEC)
+
+imgsdl:imgsdl.o
+	$(CC) -o imgsdl imgsdl.o  $(FLAGS) $(LDFLAGS)
+
+imgsdl.o:imgsdl.c
+	$(CC) imgsdl.c -c $(CFLAGS) $(LDFLAGS)
+
+clean:
+	rm -rf $(EXEC)
+
+mrproper: clean
+	rm -rf $(EXEC)
+
